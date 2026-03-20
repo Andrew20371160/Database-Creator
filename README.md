@@ -632,11 +632,6 @@ Uses helper `copy_vec<T>`.
 
 ---
 
-#### `bool other_data::operator==(const other_data&) const`
-Declared but noted as “not implemented”.
-
----
-
 #### `string other_data::to_string() const`
 Serializes the object into a single string:
 
@@ -712,7 +707,7 @@ All comparisons only use `unique_parameter`:
 - `operator<`
 - `operator>`
 - `operator<=`
-- `operator>=` (declared in header; not implemented in provided `.cpp`)
+- `operator>=`
 - `operator==`
 - `operator!=`
 
@@ -732,9 +727,6 @@ Serializes a record as:
 1. `unique_parameter` converted to string using `std::to_string(unique_parameter)` (note: this assumes numeric type)
 2. a space
 3. `other.to_string()`
-
-**Implication**
-- If `unique_data_type` is not numeric, this implementation will not compile or behave correctly.
 
 ---
 
